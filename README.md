@@ -19,5 +19,5 @@ This is a simple Tic Tac Toe game built with **React** using Context API for sta
 1. **Clone the repo:**
 
    ```bash
-   git clone https://github.com/akashgupta2233/tic-tac-toe-react.git
+   git clone https://github.com/akashgupta2233/tic-tac-toe.git
    cd tic-tac-toe-react
