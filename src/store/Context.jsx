@@ -17,20 +17,29 @@ const GameContextProvider=({children})=>{
     const [isXTurn, setIsXTurn] = useState(true)
     const [arr, setArr] = useState(Array(9).fill(null));
     const checkVictory =()=>{
-        if(arr[0]==arr[2] && arr[0]==arr[1] && arr[1]==arr[2]){
+        if( arr[0] && arr[0]==arr[2] && arr[2]==arr[1]){
             return arr[0];
         }
-        else if(arr[3]==arr[5] && arr[4]==arr[5] && arr[3]==arr[4]){
+        else if(arr[3] && arr[3]==arr[5] && arr[4]==arr[5]){
             return arr[3];
         }
-        else if(arr[6]==arr[8] && arr[6]==arr[7] && arr[7]==arr[8]){
+        else if(arr[6] && arr[6]==arr[8] && arr[6]==arr[7] ){
             return arr[6];
         }
-        else if(arr[0]==arr[8] && arr[0]==arr[4] && arr[4]==arr[8]){
+        else if(arr[0] && arr[0]==arr[8] && arr[0]==arr[4]){
             return arr[0];
         }
-        else if(arr[2]==arr[6] && arr[2]==arr[4] && arr[4]==arr[6]){
+        else if(arr[2] && arr[2]==arr[6] && arr[2]==arr[4] ){
             return arr[2];
+        }
+        else if(arr[0] && arr[0]==arr[3] && arr[0]==arr[6] ){
+            return arr[0];
+        }
+        else if(arr[1] && arr[1]==arr[4] && arr[1]==arr[7] ){
+            return arr[0];
+        }
+        else if(arr[2] && arr[2]==arr[6] && arr[2]==arr[8] ){
+            return arr[0];
         }else{
             return null;
         }
